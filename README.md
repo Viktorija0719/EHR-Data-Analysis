@@ -45,17 +45,41 @@ path = kagglehub.dataset_download("andrewmvd/heart-failure-clinical-data")
 print("Path to dataset files:", path)
 ```
 
-## Installation
 
-Create and activate a virtual environment, then install dependencies:
+## Installation and setup
+
+Clone the repository:
+
+```bash
+git clone https://github.com/Viktorija0719/EHR-Data-Analysis.git
+cd EHR-Data-Analysis
+```
+
+Create a virtual environment:
 
 ```bash
 python3 -m venv .venv
-source .venv/bin/activate
+```
 
+Activate the virtual environment:
+
+```bash
+source .venv/bin/activate
+```
+
+Upgrade pip:
+
+```bash
 python3 -m pip install --upgrade pip
+```
+
+Install all required packages:
+
+```bash
 python3 -m pip install -r requirements.txt
 ```
+
+
 
 ## Run the analysis
 
