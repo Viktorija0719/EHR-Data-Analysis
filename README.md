@@ -2,7 +2,6 @@
 
 A small Python repository for building Table 1–style summary tables and automatically selecting statistical tests for continuous and categorical variables.
 
-
 ## Features
 
 - Summary table generation by group
@@ -29,28 +28,33 @@ A small Python repository for building Table 1–style summary tables and automa
 ```text
 scripts/      Reusable functions for summaries, testing, and table building
 data/         Input and output data files
-notebooks/    Jupyter notebooks for analysis
 tests/        Optional unit tests
+analysis.ipynb Main Jupyter notebook for analysis
+README.md     Project overview and setup instructions
+requirements.txt Python dependencies
 ````
 
 ## Dataset
 
-The example dataset used in this repository comes from Kaggle and can be downloaded with `kagglehub`:
+The example dataset used in this repository comes from Kaggle and can be found on `kagglehub`:
 
 ```python
 import kagglehub
 
-# Download latest version
 path = kagglehub.dataset_download("andrewmvd/heart-failure-clinical-data")
-
 print("Path to dataset files:", path)
 ```
 
 ## Installation
 
+Create and activate a virtual environment, then install dependencies:
+
 ```bash
+python3 -m venv .venv
 source .venv/bin/activate
-pip install -r requirements.txt
+
+python3 -m pip install --upgrade pip
+python3 -m pip install -r requirements.txt
 ```
 
 ## Run the analysis
@@ -58,7 +62,7 @@ pip install -r requirements.txt
 Start JupyterLab from the repository directory:
 
 ```bash
-jupyter lab
+python3 -m jupyter lab
 ```
 
 Then open:
@@ -66,5 +70,3 @@ Then open:
 ```text
 analysis.ipynb
 ```
-
-1
